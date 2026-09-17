@@ -1,35 +1,45 @@
-@import './base.css';
-
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
+html,
+body {
+  min-height: 100%;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
+:root {
+  --bg: #fff;
+  --text: #111;
+  --card-placeholder: #e8e6e1;
+  /* Ink color of the logo wordmark (sampled from logo-black/yellow.png). */
+  --wordmark: #000;
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
+[data-theme='dark'] {
+  --bg: #000;
+  --text: #f5f3ef;
+  --card-placeholder: #1a1a1a;
+  --wordmark: #fdfade;
+}
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+body {
+  font-family:
+    'Helvetica Neue',
+    Helvetica,
+    Arial,
+    system-ui,
+    -apple-system,
+    sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.25s ease;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
 }

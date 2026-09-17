@@ -10,6 +10,12 @@ const router = createRouter({
       component: HomeView,
     },
     {
+      // Home grid plus a live tuning panel for the blink effect.
+      path: '/dev',
+      name: 'dev',
+      component: HomeView,
+    },
+    {
       path: '/about',
       name: 'about',
       // route level code-splitting

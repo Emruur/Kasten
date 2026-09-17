@@ -12,7 +12,10 @@
     "lint": "run-s \"lint:*\"",
     "lint:oxlint": "oxlint . --fix",
     "lint:eslint": "eslint . --fix --cache",
-    "format": "prettier --write --experimental-cli src/"
+    "format": "prettier --write --experimental-cli src/",
+    "generate:artworks": "node scripts/generate-artworks.mjs",
+    "generate:thumbs": "node scripts/generate-thumbs.mjs",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "vue": "^3.5.38",
@@ -28,10 +31,13 @@
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-oxlint": "~1.69.0",
     "eslint-plugin-vue": "~10.9.2",
+    "gh-pages": "^6.3.0",
     "jiti": "^2.7.0",
     "npm-run-all2": "^9.0.2",
     "oxlint": "~1.69.0",
+    "playwright": "^1.54.1",
     "prettier": "3.8.4",
+    "sharp": "^0.35.3",
     "typescript": "~6.0.0",
     "vite": "^8.0.16",
     "vite-plugin-vue-devtools": "^8.1.2",
